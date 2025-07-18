@@ -35,7 +35,7 @@ def registrar_uso_make(titulo, formato, idioma):
         print("❌ Error al registrar en Make:", e)
 
 # === IDIOMA / TRADUCCIÓN ===
-lang = st.sidebar.selectbox("🌐 Language / Idioma", ["Español", "English"])
+lang = st.sidebar.selectbox("🌐 Language / Idioma", ["English", "Español"])
 
 T = {
     "Español": {
