@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import json
 import requests
@@ -16,7 +17,7 @@ def get_ip():
 def registrar_uso_make(titulo, formato, idioma):
     try:
         ip = get_ip()
-        url = "MAKE_WEBHOOK_URL"
+        url = os.getenv("MAKE_WEBHOOK_URL")
         data = {
             "timestamp": datetime.now(timezone.utc).isoformat(),
             "titulo": titulo,
